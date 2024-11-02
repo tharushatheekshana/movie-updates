@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Rowdies:wght@300;400;700&family=Titan+One&display=swap");
+
+body.about-page {
+  background-image: url("/movies-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  margin-top: 100px;
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+body.about-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: -1;
+}
+
+.site-name {
+  font-size: 3.5rem;
+  padding: 30px;
+  color: #fff;
+  text-align: center;
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0px 0px 2px #ff5722, 0px 0px 4px #ff5722, 0px 0px 8px #ff5722,
+    0px 0px 16px #ff5722;
+  /* margin-bottom: 40px; */
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.about-section {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 30px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff5722;
+  font-weight: 600;
+}
+
+.about-section .about-section p,
+.about-section ul,
+.about-section li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #ddd;
+}
+
+.about-section h3 {
+  font-size: 1.5rem;
+  color: #ff5722;
+  margin-top: 20px;
+}
+
+.about-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-section li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.about-section li::before {
+  color: #ff5722;
+  font-size: 1.2rem;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+.about-section a {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.about-section a:hover {
+  color: #ff5722;
+  text-decoration: underline;
+}
+
+.socials {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.socials .item a {
+  text-decoration: none;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: #f0f9fe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  border: 3px solid #f0f9fe;
+  overflow: hidden;
+}
+
+.socials .item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 0;
+  scale: 1 0;
+  transform-origin: bottom;
+  transition: scale 0.5s ease;
+}
+
+.socials .item:hover a::before {
+  scale: 1 1;
+}
+
+.icon {
+  font-size: 2rem;
+  color: hsl(203, 92%, 8%);
+  transition: 0.5s ease;
+  z-index: 2;
+}
+
+.socials .item a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.socials .item:nth-child(1) {
+  --bg-color: #333;
+}
+
+.socials .item:nth-child(2) {
+  --bg-color: #0077b5;
+}
+.socials .item:nth-child(3) {
+  --bg-color: #1877f2;
+}
+
+.socials .item:nth-child(4) {
+  --bg-color: #0088cc;
+}

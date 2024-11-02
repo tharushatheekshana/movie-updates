@@ -1,0 +1,122 @@
+body.home-pages-body {
+  background-image: url("/movies-background.jpg");
+  color: white;
+  margin-top: 120px;
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  margin-top: 120px;
+}
+
+body.home-pages-body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: -1;
+}
+
+.seeall-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  /* margin-left: 20rem; */
+  border-radius: 10px;
+}
+
+.seeall-card {
+  aspect-ratio: 1 / 0.7;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.seeall-card .seeall-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 90%;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.seeall-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.seeall-card:hover img {
+  filter: grayscale(1) brightness(0.4);
+}
+.seeall-card:hover::after {
+  opacity: 1;
+  inset: 15px;
+}
+
+.seeall-content {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  overflow: hidden;
+}
+
+.seeall-content h2,
+.seeall-content p {
+  opacity: 0;
+  transition: 0.4s 0.2s ease;
+}
+.seeall-content h2 {
+  margin-bottom: 10px;
+  scale: 0.7;
+}
+.seeall-content p {
+  font-size: 15px;
+  line-height: 1.2;
+  color: #d1d1d1;
+  transform: translateY(50%);
+  font-family: "poppins", sans-serif;
+}
+.seeall-card:hover .seeall-content h2 {
+  scale: 1;
+  opacity: 1;
+}
+.seeall-card:hover .seeall-content P {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.seeall-heading {
+  font-size: 2em;
+  font-weight: bold;
+  /* color: #333; */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.seeall-line {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 20px auto;
+  width: 80%;
+}

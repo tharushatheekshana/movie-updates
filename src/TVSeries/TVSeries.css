@@ -1,0 +1,317 @@
+body.series-body {
+  background-image: url("/movies-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  margin-top: 90px;
+  font-family: "DM Sans", sans-serif;
+  /* overflow-x: hidden; */
+}
+
+body.series-body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.series-side-nav {
+  width: 20rem;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border-right: 1px solid #444444;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.series-side-nav p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.series-side-nav .container {
+  margin-bottom: 20px;
+}
+
+.series-side-nav label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+/* .card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-rows: repeat(auto-fill, 400px);
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  margin-left: 16rem;
+
+  aspect-ratio: 1 / 0.7;
+  border-radius: 8px;
+  position: relative;
+}
+
+.card .movie {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: o.5s ease-in-out;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover img {
+  filter: grayscale(1) brightness(0.5);
+}
+
+.card:hover::after {
+  opacity: 1;
+  inset: 20px;
+}
+
+.card:hover .content {
+  scale: 1;
+  opacity: 1;
+}
+
+.card:hover .content p {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+/* .card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-rows: repeat(auto-fill, 400px);
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  margin-left: 16rem;
+
+  width: 400px;
+  aspect-ratio: 1 / 0.7;
+  border-radius: 8px;
+  position: relative;
+}
+
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 90%;
+  border-radius: inherit;
+  transition: 0.5s ease-in-out;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+  filter: grayscale(1) brightness(0.4);
+}
+
+.card:hover::after {
+  opacity: 1;
+  inset: 20px;
+}
+
+.content {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s 0.2s ease;
+}
+
+.card:hover .content {
+  opacity: 1;
+}
+
+.card:hover .content h2,
+.card:hover .content p {
+  transform: translateY(0);
+  opacity: 1;
+  scale: 1;
+} */
+
+/* .card {
+  position: relative;
+  border-radius: 8px;
+  aspect-ratio: 1 / 0.7;
+}
+
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 90%;
+  border-radius: inherit;
+  transition: 0.5s ease-in-out;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+  filter: grayscale(1) brightness(0.4);
+}
+
+.card:hover::after {
+  opacity: 1;
+  inset: 20px;
+}
+
+.content {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s 0.2s ease;
+  font-size: smaller;
+}
+
+.card:hover .content {
+  opacity: 1;
+}
+
+.card:hover .content h2,
+.card:hover .content p {
+  transform: translateY(0);
+  opacity: 1;
+} */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  margin-left: 20rem;
+  border-radius: 10px;
+}
+
+.series-card {
+  aspect-ratio: 1 / 0.7;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  /* height: 90%; */
+  /* transition: 0.4s ease-in-out; */
+}
+/* .card .image-box {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+} */
+.series-card .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 90%;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.series-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.series-card:hover img {
+  filter: grayscale(1) brightness(0.4);
+}
+.series-card:hover::after {
+  opacity: 1;
+  inset: 15px;
+}
+
+.content {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  overflow: hidden;
+}
+
+.content h2,
+.content p {
+  opacity: 0;
+  transition: 0.4s 0.2s ease;
+}
+.content h2 {
+  margin-bottom: 10px;
+  scale: 0.7;
+}
+.content p {
+  font-size: 15px;
+  line-height: 1.2;
+  color: #d1d1d1;
+  transform: translateY(50%);
+  font-family: "poppins", sans-serif;
+}
+.series-card:hover .content h2 {
+  scale: 1;
+  opacity: 1;
+}
+.series-card:hover .content P {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* .movie img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+} */
